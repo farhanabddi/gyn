@@ -1,5 +1,5 @@
 import { NavLink } from 'react-router-dom';
-import { LayoutDashboard, Users, UserPlus, FileText, LogOut, Dumbbell } from 'lucide-react';
+import { LayoutDashboard, Users, UserPlus, FileText, LogOut, Dumbbell, Receipt, FileBarChart } from 'lucide-react';
 import { useAuth } from '../hooks/useAuth';
 
 export default function Sidebar() {
@@ -10,6 +10,8 @@ export default function Sidebar() {
     { icon: UserPlus, label: 'Register', path: '/register' },
     { icon: Users, label: 'Members', path: '/members' },
     { icon: FileText, label: 'Transactions', path: '/transactions' },
+    { icon: Receipt, label: 'Expenses', path: '/expenses' },
+    { icon: FileBarChart, label: 'Report', path: '/report' },
   ];
 
   return (
@@ -41,7 +43,7 @@ export default function Sidebar() {
       </nav>
 
       <div className="p-4 border-t border-gray-100">
-        <p className="text-xs text-gray-400 mb-3 px-2 truncate">Admin: {user?.email}</p>
+        <p className="text-xs text-gray-400 mb-3 px-2 truncate">Admin: {user?.email || 'Admin'}</p>
         <button 
           onClick={() => signOut()} 
           className="flex items-center gap-3 px-3 py-2 w-full text-sm font-medium text-gray-600 hover:text-red-600 hover:bg-red-50 rounded-lg transition-colors"

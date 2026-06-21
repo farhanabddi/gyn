@@ -6,6 +6,8 @@ import Dashboard from './pages/Dashboard';
 import Members from './pages/Members';
 import Register from './pages/Register';
 import Transactions from './pages/Transactions';
+import Expenses from './pages/Expenses';
+import Report from './pages/Report';  
 import Login from './pages/Login';
 
 export default function App() {
@@ -23,6 +25,8 @@ export default function App() {
               <Route path="/members" element={<Members />} />
               <Route path="/register" element={<Register />} />
               <Route path="/transactions" element={<Transactions />} />
+              <Route path="/expenses" element={<Expenses />} />
+              <Route path="/report" element={<Report />} />
             </Route>
           </Route>
 
